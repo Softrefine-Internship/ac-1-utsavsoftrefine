@@ -1,0 +1,58 @@
+.project-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 2rem;
+
+    &__text{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #444;
+    }
+}
+
+.project-info-container{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.project-info{
+
+    position: relative;
+
+    &__subtext{
+        font-size: 1rem;
+        color: #666666;
+    }
+
+    &__num{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    &__icon{
+        font-size: 0.7rem;
+        position: absolute;
+        left: 6rem;
+        top: 3rem;
+
+
+        &:hover{
+            background-color: green;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+
+.filter-group{
+
+
+    &__icon{
+        font-size: 2.5rem;
+        margin-left: 2rem;
+    }
+}

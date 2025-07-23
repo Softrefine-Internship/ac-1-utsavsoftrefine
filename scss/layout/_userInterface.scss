@@ -1,0 +1,14 @@
+.user-intraction {
+  display: inline-block;
+  width: 94%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.project-container{
+  transform: translateY(-1rem);
+  padding: 2rem;
+}

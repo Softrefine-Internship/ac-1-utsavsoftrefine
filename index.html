@@ -4,6 +4,663 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__static">
+        <ion-icon class="header__ham" name="filter-outline"></ion-icon>
+
+        <p class="header__title">Portfolio</p>
+
+        <div class="header__search-container">
+          <ion-icon
+            class="header__search-icon"
+            name="search-outline"
+          ></ion-icon>
+          <input class="header__search-text" type="text" placeholder="Search" />
+        </div>
+      </div>
+
+      <div class="header__action">
+        <div class="header__cta">
+          <ion-icon class="header__action-plus" name="add-circle"></ion-icon>
+          <ion-icon
+            class="header__action-noti"
+            name="notifications-outline"
+          ></ion-icon>
+        </div>
+        <div class="header__profile">
+          <img
+            class="header__profile-img"
+            src="https://randomuser.me/api/portraits/women/45.jpg"
+            alt=""
+          />
+          <p class="header__profile-text">Hira R</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="navigation">
+        <nav class="nav">
+          <ul class="nav__contianer">
+            <li class="nav__link">
+              <a href="#" class="nav__link-icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link-icon"
+                ><ion-icon name="person-outline"></ion-icon
+              ></a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link-icon"
+                ><ion-icon name="chatbox-outline"></ion-icon
+              ></a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link-icon"
+                ><ion-icon name="calendar-outline"></ion-icon
+              ></a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link-icon"
+                ><ion-icon name="time-outline"></ion-icon
+              ></a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link-icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="user-intraction">
+        <div class="grid">
+          <div class="project-container">
+            <div class="project">
+              <div class="project-heading">
+                <h2 class="heading-secondary">Project</h2>
+                <p class="project-heading__text">July, 2020</p>
+              </div>
+            </div>
+
+            <div class="project-info-container">
+              <div class="project-all-info-container">
+                <div class="project-info">
+                  <p class="project-info__text">
+                    <span class="project-info__num">45</span>
+                    <br />
+                    <span class="project-info__subtext">
+                      In progress
+                      <ion-icon
+                        class="project-info__icon"
+                        name="ellipse-outline"
+                      ></ion-icon>
+                    </span>
+                  </p>
+                </div>
+
+                <div class="project-info">
+                  <p class="project-info__text">
+                    <span class="project-info__num">45</span>
+                    <br />
+                    <span class="project-info__subtext">
+                      In progress
+                      <ion-icon
+                        class="project-info__icon"
+                        name="ellipse-outline"
+                      ></ion-icon>
+                    </span>
+                  </p>
+                </div>
+
+                <div class="project-info">
+                  <p class="project-info__text">
+                    <span class="project-info__num">45</span>
+                    <br />
+                    <span class="project-info__subtext">
+                      In progress
+                      <ion-icon
+                        class="project-info__icon"
+                        name="ellipse-outline"
+                      ></ion-icon>
+                    </span>
+                  </p>
+                </div>
+
+                <div class="project-info">
+                  <p class="project-info__text">
+                    <span class="project-info__num">45</span>
+                    <br />
+                    <span class="project-info__subtext"> In progress </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <ion-icon
+                  class="filter-group__icon"
+                  name="reorder-three-outline"
+                ></ion-icon>
+                <ion-icon
+                  class="filter-group__icon"
+                  name="grid-outline"
+                ></ion-icon>
+              </div>
+            </div>
+
+            <div class="card-conatiner">
+              <div class="card card--white card--progress-90">
+                <div class="card__date">July 10, 2020</div>
+                <div class="card__menu">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+                <div class="card__title">Dashboard</div>
+                <div class="card__subtitle">Medical</div>
+
+                <p class="card__progress__text">Progress</p>
+                <div class="card__progress">
+                  <div class="card__progress-bar">
+                    <div class="card__progress-bar-fill"></div>
+                  </div>
+                </div>
+                <p class="card__progress__text--end">90%</p>
+
+                <div class="card__footer">
+                  <div class="card__avatars">
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=3"
+                      alt="User 1"
+                    />
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="User 2"
+                    />
+
+                    <ion-icon
+                      class="card__add-icon"
+                      name="add-circle"
+                    ></ion-icon>
+                  </div>
+                  <div class="card__deadline">2 week left</div>
+                </div>
+              </div>
+
+              <div class="card card--orange card--progress-30">
+                <div class="card__date">July 10, 2020</div>
+                <div class="card__menu">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+                <div class="card__title">Dashboard</div>
+                <div class="card__subtitle">Medical</div>
+
+                <p class="card__progress__text">Progress</p>
+                <div class="card__progress">
+                  <div class="card__progress-bar">
+                    <div class="card__progress-bar-fill"></div>
+                  </div>
+                </div>
+                <p class="card__progress__text--end">30%</p>
+
+                <div class="card__footer">
+                  <div class="card__avatars">
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=3"
+                      alt="User 1"
+                    />
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="User 2"
+                    />
+
+                    <ion-icon
+                      class="card__add-icon"
+                      name="add-circle"
+                    ></ion-icon>
+                  </div>
+                  <div class="card__deadline">2 week left</div>
+                </div>
+              </div>
+
+              <div class="card card--green card--progress-50">
+                <div class="card__date">July 10, 2020</div>
+                <div class="card__menu">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+                <div class="card__title">Dashboard</div>
+                <div class="card__subtitle">Medical</div>
+
+                <p class="card__progress__text">Progress</p>
+                <div class="card__progress">
+                  <div class="card__progress-bar">
+                    <div class="card__progress-bar-fill"></div>
+                  </div>
+                </div>
+                <p class="card__progress__text--end">50%</p>
+
+                <div class="card__footer">
+                  <div class="card__avatars">
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=3"
+                      alt="User 1"
+                    />
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="User 2"
+                    />
+
+                    <ion-icon
+                      class="card__add-icon"
+                      name="add-circle"
+                    ></ion-icon>
+                  </div>
+                  <div class="card__deadline">2 week left</div>
+                </div>
+              </div>
+
+              <div class="card card--pink card--progress-20">
+                <div class="card__date">July 10, 2020</div>
+                <div class="card__menu">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+                <div class="card__title">Dashboard</div>
+                <div class="card__subtitle">Medical</div>
+
+                <p class="card__progress__text">Progress</p>
+                <div class="card__progress">
+                  <div class="card__progress-bar">
+                    <div class="card__progress-bar-fill"></div>
+                  </div>
+                </div>
+                <p class="card__progress__text--end">20%</p>
+
+                <div class="card__footer">
+                  <div class="card__avatars">
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=3"
+                      alt="User 1"
+                    />
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="User 2"
+                    />
+
+                    <ion-icon
+                      class="card__add-icon"
+                      name="add-circle"
+                    ></ion-icon>
+                  </div>
+                  <div class="card__deadline">2 week left</div>
+                </div>
+              </div>
+
+              <div class="card card--purple card--progress-100">
+                <div class="card__date">July 10, 2020</div>
+                <div class="card__menu">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+                <div class="card__title">Dashboard</div>
+                <div class="card__subtitle">Medical</div>
+
+                <p class="card__progress__text">Progress</p>
+                <div class="card__progress">
+                  <div class="card__progress-bar">
+                    <div class="card__progress-bar-fill"></div>
+                  </div>
+                </div>
+                <p class="card__progress__text--end">100%</p>
+
+                <div class="card__footer">
+                  <div class="card__avatars">
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=3"
+                      alt="User 1"
+                    />
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="User 2"
+                    />
+
+                    <ion-icon
+                      class="card__add-icon"
+                      name="add-circle"
+                    ></ion-icon>
+                  </div>
+                  <div class="card__deadline">2 week left</div>
+                </div>
+              </div>
+
+              <div class="card card--skin card--progress-70">
+                <div class="card__date">July 10, 2020</div>
+                <div class="card__menu">
+                  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+                <div class="card__title">Dashboard</div>
+                <div class="card__subtitle">Medical</div>
+
+                <p class="card__progress__text">Progress</p>
+                <div class="card__progress">
+                  <div class="card__progress-bar">
+                    <div class="card__progress-bar-fill"></div>
+                  </div>
+                </div>
+                <p class="card__progress__text--end">70%</p>
+
+                <div class="card__footer">
+                  <div class="card__avatars">
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=3"
+                      alt="User 1"
+                    />
+                    <img
+                      class="card__avatar"
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="User 2"
+                    />
+
+                    <ion-icon
+                      class="card__add-icon"
+                      name="add-circle"
+                    ></ion-icon>
+                  </div>
+                  <div class="card__deadline">2 week left</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message">
+            <div class="message__heading">
+              <h2 class="heading-secondary">Client Messages</h2>
+              <div class="filter-group">
+                <ion-icon
+                  class="filter-group__icon"
+                  name="search-outline"
+                ></ion-icon>
+                <ion-icon
+                  class="filter-group__icon"
+                  name="ellipsis-vertical-outline"
+                ></ion-icon>
+              </div>
+            </div>
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>  
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+
+
+            <div class="message-card">
+              <div class="message-card__img">
+                <img
+                  src="https://randomuser.me/api/portraits/men/47.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="message-card__text">
+                <div class="message-card__text-heading">
+                  <h2 class="heading-secondary">David</h2>
+                  <ion-icon
+                    class="message-card__text__icon"
+                    name="star-outline"
+                  ></ion-icon>
+                </div>
+                <div class="message-card__text-mes">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Eius, vel! adipisicing elit. Eius, vel! Eius, vel!
+                  </p>
+                </div>
+
+                <p>21 July</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 </html>

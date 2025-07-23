@@ -1,0 +1,64 @@
+.message {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dadada;
+    padding-top: 4rem;
+    padding-left: 3rem;
+  }
+
+  &-card {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    padding-left: 3rem;
+    transition: all 0.4s;
+    &__img {
+      margin-top: 0.5rem;
+      & img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+    }
+
+    &__text {
+      &-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+      }
+
+      & > p {
+        text-align: end;
+        color: #777;
+      }
+
+      &__icon {
+        font-size: 1.5rem;
+        color: #000;
+        transition: all 0.3s;
+        padding: 0.4rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: #000;
+          color: white;
+          border: 1px solid white;
+        }
+      }
+    }
+
+    border-bottom: 1px solid #dadada;
+
+    &:hover {
+      background-color: #fff;
+      transform: scale(1.1);
+      border-radius: 20px;
+    }
+  }
+}

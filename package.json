@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "sass": "^1.89.2"
+  },
+  "name": "ac-1-utsavsoftrefine",
+  "version": "1.0.0",
+  "description": "### Project Description",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass main.scss main.css",
+    "sass:watch": "sass --watch main.scss:css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Softrefine-Internship/ac-1-utsavsoftrefine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Softrefine-Internship/ac-1-utsavsoftrefine/issues"
+  },
+  "homepage": "https://github.com/Softrefine-Internship/ac-1-utsavsoftrefine#readme"
+}

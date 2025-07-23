@@ -1,0 +1,187 @@
+@use "../abstracts/mixins" as *;
+
+.card-conatiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4rem;
+  column-gap: 4rem;
+  margin-top: 3rem;
+}
+
+.card {
+  border-radius: 20px;
+  width: 26rem;
+  height: 23rem;
+  padding: 1.5rem;
+  position: relative;
+  justify-self: center;
+  box-shadow: 0 1rem 1.8rem rgba(#000000, 0.2);
+
+  &__date {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 1.2rem;
+    color: #444;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+      width: 100%;
+      font-weight: 600;
+      color: #666;
+
+      &--end {
+        text-align: end;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+      }
+    }
+
+    &-bar {
+      flex: 1;
+      height: 0.6rem;
+      background-color: #fff;
+      border-radius: 3px;
+      margin: 0.5rem 0;
+      overflow: hidden;
+
+      &-fill {
+        width: 50%;
+        height: 100%;
+        background-color: #00b86b;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__avatars {
+    display: flex;
+
+    & > .card__avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      margin-right: -5px;
+      border: 1px solid #fff;
+    }
+
+    & > .card__add-icon {
+      color: #00b86b;
+      font-size: 2.5rem;
+      border-radius: 50%;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &__deadline {
+    background-color: white;
+    color: #00b86b;
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.card__progress-bar-fill {
+  width: 0%; // default
+  transition: width 0.4s ease;
+}
+
+.card--progress-10 .card__progress-bar-fill {
+  width: 10%;
+}
+.card--progress-20 .card__progress-bar-fill {
+  width: 20%;
+}
+.card--progress-30 .card__progress-bar-fill {
+  width: 30%;
+}
+.card--progress-40 .card__progress-bar-fill {
+  width: 40%;
+}
+.card--progress-50 .card__progress-bar-fill {
+  width: 50%;
+}
+.card--progress-60 .card__progress-bar-fill {
+  width: 60%;
+}
+.card--progress-70 .card__progress-bar-fill {
+  width: 70%;
+}
+.card--progress-80 .card__progress-bar-fill {
+  width: 80%;
+}
+.card--progress-90 .card__progress-bar-fill {
+  width: 90%;
+}
+.card--progress-100 .card__progress-bar-fill {
+  width: 100%;
+}
+
+// Color variants using BEM modifiers
+.card--white {
+  @include card-theme(#fefffe, #55ccf5);
+}
+
+.card--orange {
+  @include card-theme(#ffe5cb, #ed7a4c);
+}
+
+.card--green {
+  @include card-theme(#bbf2d2, #0bc954);
+}
+
+.card--pink {
+  @include card-theme(#fed2e2, #f674aa);
+}
+
+.card--purple {
+  @include card-theme(#e9e7fd, #7700ff);
+}
+
+.card--skin {
+  @include card-theme(#fff1d2, #ff9900);
+}
+
+// - #F3F6FD
+// - #151522
+// - #FFFFFF
+// - #FDE5CC
+// - #B4F1CE
+// - #FFD3E2
+// - #E9E7FD

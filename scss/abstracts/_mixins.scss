@@ -1,0 +1,35 @@
+// @mixin card-theme($bg-color, $main-color) {
+//     background-color: $bg-color;
+
+//     .card__progress-bar-fill {
+//       background-color: $main-color;
+//     }
+
+//     .card__avatars > .card__add-icon {
+//       color: $main-color;
+//     }
+
+//     .card__progress__text--end {
+//       border-bottom-color: #fff;
+//     }
+
+//     .card__deadline {
+//       color: $main-color;
+//     }
+//   }
+
+@mixin card-theme($bg, $main) {
+    background-color: $bg;
+
+    .card__progress-bar-fill {
+      background-color: $main;
+    }
+
+    .card__avatars > .card__add-icon {
+      color: $main;
+    }
+
+    .card__deadline {
+      color: $main;
+    }
+  }
