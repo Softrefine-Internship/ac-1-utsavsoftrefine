@@ -1,9 +1,11 @@
+@use "../abstracts/variables" as *;
+
 .message {
   &__heading {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid $card-hor-color;
     padding-top: 4rem;
     padding-left: 3rem;
   }
@@ -24,6 +26,10 @@
     }
 
     &__text {
+      @media (max-width: 67em) {
+        width: 100%;
+      }
+
       &-heading {
         display: flex;
         justify-content: space-between;
@@ -31,9 +37,14 @@
         margin-bottom: 0.8rem;
       }
 
+      &-mes p {
+        line-height: 1.5rem;
+        overflow-y: hidden;
+      }
+
       & > p {
         text-align: end;
-        color: #777;
+        color: $gray-dark-color;
       }
 
       &__icon {
@@ -47,18 +58,19 @@
         justify-content: center;
         &:hover {
           background-color: #000;
-          color: white;
-          border: 1px solid white;
+          color: $white-color;
+          border: 1px solid $white-color;
         }
       }
     }
 
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid $card-hor-color;
 
     &:hover {
-      background-color: #fff;
+      background-color: $white-color;
       transform: scale(1.1);
       border-radius: 20px;
+      box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
     }
   }
 }

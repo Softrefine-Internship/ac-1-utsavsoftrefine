@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .header {
   display: flex;
   gap: 2rem;
@@ -13,16 +15,22 @@
   &__title {
     font-weight: 600;
     font-size: 4rem;
+    @media (max-width: 36.5em) {
+      font-size: 2rem;
+    }
   }
 
   &__static {
     display: flex;
     align-items: center;
     gap: 8rem;
+    @media (max-width: 54.5em) {
+      gap: 5rem;
+    }
   }
 
   &__search-container {
-    background: #fff;
+    background: $white-color;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -39,14 +47,17 @@
     border: none;
     font-size: 1.5rem;
     font-family: inherit;
-
+    @media (max-width: 49em) {
+      display: none;
+    }
     &:focus-visible {
       outline: none;
     }
   }
 
   &__cta {
-    border-right: 1px solid #212121;
+    white-space: nowrap;
+    border-right: 1px solid $black-color;
     padding-right: 2rem;
   }
 
@@ -59,11 +70,13 @@
     &-plus {
       font-size: 2.5rem;
       margin-right: 1rem;
+      cursor: pointer;
     }
 
     &-noti {
       font-size: 2.5rem;
       position: relative;
+      cursor: pointer;
 
       &::before {
         content: "";
@@ -82,15 +95,20 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
     &-img {
       width: 3rem;
       height: 3rem;
       border-radius: 50%;
     }
     &-text {
+      white-space: nowrap;
       display: inline-block;
       font-size: 2rem;
       font-weight: 550;
+      @media (max-width: 54.5em) {
+        font-size: 1.5rem;
+      }
     }
   }
 }

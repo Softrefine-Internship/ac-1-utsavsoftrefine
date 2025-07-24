@@ -1,10 +1,15 @@
-.project-container{
-    border-radius: 50px;
-    background-color: #fff;
+@use "../abstracts/variables" as *;
+
+.project-container {
+  border-radius: 50px;
+  background-color: $white-color;
 }
 
-.project-all-info-container{
-    display: flex;
-    justify-content: space-between;
-    gap: 6rem;
+.project-all-info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  @media (max-width: 54.5em) {
+    gap: 3rem;
+  }
 }

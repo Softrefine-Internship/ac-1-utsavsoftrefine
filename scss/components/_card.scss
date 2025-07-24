@@ -1,11 +1,20 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .card-conatiner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 4rem;
-  column-gap: 4rem;
+  row-gap: 6rem;
   margin-top: 3rem;
+
+  @media (max-width: 67em) {
+    padding: 0 3rem;
+  }
+
+  @media (max-width: 41em) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 }
 
 .card {
@@ -15,11 +24,17 @@
   padding: 1.5rem;
   position: relative;
   justify-self: center;
-  box-shadow: 0 1rem 1.8rem rgba(#000000, 0.2);
+  box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &__date {
     font-size: 1.2rem;
-    color: #555;
+    color: $gary-mid-color;
     margin-bottom: 2.5rem;
   }
 
@@ -28,20 +43,20 @@
     top: 1.2rem;
     right: 1.5rem;
     font-size: 1.2rem;
-    color: #444;
+    color: $gary-mid-color;
     cursor: pointer;
   }
 
   &__title {
     font-weight: 600;
-    color: #444;
+    color: $gary-mid-color;
     font-size: 1.8rem;
     text-align: center;
   }
 
   &__subtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: $gray-light-color;
     margin-bottom: 1.5rem;
     text-align: center;
   }
@@ -54,13 +69,13 @@
     &__text {
       width: 100%;
       font-weight: 600;
-      color: #666;
+      color: $gray-light-color;
 
       &--end {
         text-align: end;
         padding-bottom: 1.5rem;
         margin-bottom: 1.8rem;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $card-hor-color;
         width: 100%;
       }
     }
@@ -68,7 +83,7 @@
     &-bar {
       flex: 1;
       height: 0.6rem;
-      background-color: #fff;
+      background-color: $white-color;
       border-radius: 3px;
       margin: 0.5rem 0;
       overflow: hidden;
@@ -76,7 +91,6 @@
       &-fill {
         width: 50%;
         height: 100%;
-        background-color: #00b86b;
       }
     }
   }
@@ -95,11 +109,10 @@
       height: 2.5rem;
       border-radius: 50%;
       margin-right: -5px;
-      border: 1px solid #fff;
+      border: 1px solid $white-color;
     }
 
     & > .card__add-icon {
-      color: #00b86b;
       font-size: 2.5rem;
       border-radius: 50%;
       margin-left: 0.5rem;
@@ -108,8 +121,8 @@
   }
 
   &__deadline {
-    background-color: white;
-    color: #00b86b;
+    background-color: $white-color;
+
     padding: 0.8rem 2rem;
     border-radius: 20px;
     font-size: 1rem;
@@ -155,27 +168,27 @@
 
 // Color variants using BEM modifiers
 .card--white {
-  @include card-theme(#fefffe, #55ccf5);
+  @include card-theme($card-white-primary, $card-white-secondary, #55cdf52c);
 }
 
 .card--orange {
-  @include card-theme(#ffe5cb, #ed7a4c);
+  @include card-theme($card-orange-primary, $card-orange-secondary);
 }
 
 .card--green {
-  @include card-theme(#bbf2d2, #0bc954);
+  @include card-theme($card-green-primary, $card-green-secondary);
 }
 
 .card--pink {
-  @include card-theme(#fed2e2, #f674aa);
+  @include card-theme($card-pink-primary, $card-pink-secondary);
 }
 
 .card--purple {
-  @include card-theme(#e9e7fd, #7700ff);
+  @include card-theme($card-purple-primary, $card-purple-secondary);
 }
 
 .card--skin {
-  @include card-theme(#fff1d2, #ff9900);
+  @include card-theme($card-skin-primary, $card-skin-secondary);
 }
 
 // - #F3F6FD

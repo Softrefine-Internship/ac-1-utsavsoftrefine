@@ -1,14 +1,25 @@
 .user-intraction {
   display: inline-block;
-  width: 94%;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 1rem;
+  @media (max-width: 67em) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.project-container{
+.project-container {
   transform: translateY(-1rem);
   padding: 2rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 10fr 90fr;
+  @media (max-width: 49em) {
+    grid-template-columns: 1fr;
+  }
 }

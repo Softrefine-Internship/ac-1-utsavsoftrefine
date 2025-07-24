@@ -1,7 +1,5 @@
-.navigation{
-    display: inline-block;
-    width: 5%;
-}
+@use "../abstracts/variables" as *;
+
 
 .nav {
   &__contianer {
@@ -9,10 +7,12 @@
     margin-right: 2rem;
     display: flex;
     flex-direction: column;
-
     gap: 3rem;
 
-
+    @media (max-width: 49em) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -24,20 +24,15 @@
     align-items: center;
     justify-content: center;
 
-
-
     &-icon {
       color: inherit;
-        z-index: 1;
-
-
+      z-index: 1;
     }
 
-    &:hover{
-        color: #fff;
-        background-color: #212121;
-        border-radius: 50%;
+    &:hover {
+      color: $white-color;
+      background-color: $black-color;
+      border-radius: 50%;
     }
-
   }
 }

@@ -1,35 +1,45 @@
-// @mixin card-theme($bg-color, $main-color) {
-//     background-color: $bg-color;
+@mixin card-theme($bg, $main, $deadline: white) {
+  background-color: $bg;
 
-//     .card__progress-bar-fill {
-//       background-color: $main-color;
-//     }
-
-//     .card__avatars > .card__add-icon {
-//       color: $main-color;
-//     }
-
-//     .card__progress__text--end {
-//       border-bottom-color: #fff;
-//     }
-
-//     .card__deadline {
-//       color: $main-color;
-//     }
-//   }
-
-@mixin card-theme($bg, $main) {
-    background-color: $bg;
-
-    .card__progress-bar-fill {
-      background-color: $main;
-    }
-
-    .card__avatars > .card__add-icon {
-      color: $main;
-    }
-
-    .card__deadline {
-      color: $main;
-    }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: lighten($main, 20%)  ;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
   }
+
+  &::before {
+    width: 90%;
+    bottom: -10px;
+  }
+
+  &::after {
+    width: 70%;
+    bottom: -16px;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+
+  .card__progress-bar-fill {
+    background-color: $main;
+  }
+
+  .card__avatars > .card__add-icon {
+    color: $main;
+  }
+
+  .card__deadline {
+    color: $main;
+    background-color: $deadline;
+  }
+}
