@@ -12,13 +12,13 @@
 }
 
 .project-container {
-  transform: translateY(-1rem);
-  padding: 2rem;
+  transform: translateY(-4rem);
+  padding: 4rem;
 }
 
 .main-grid {
   display: grid;
-  grid-template-columns: 10fr 90fr;
+  grid-template-columns: 1fr 90fr;
   @media (max-width: 49em) {
     grid-template-columns: 1fr;
   }

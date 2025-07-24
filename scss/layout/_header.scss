@@ -1,12 +1,13 @@
 @use "../abstracts/variables" as *;
 
 .header {
+  width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 
   &__ham {
     font-size: 3rem;
@@ -23,9 +24,12 @@
   &__static {
     display: flex;
     align-items: center;
-    gap: 8rem;
+    gap: 10rem;
     @media (max-width: 54.5em) {
       gap: 5rem;
+    }
+    @media (max-width: 36.5em) {
+      margin-right: 2rem;
     }
   }
 
@@ -50,6 +54,9 @@
     @media (max-width: 49em) {
       display: none;
     }
+    @media (max-width: 36.5em) {
+      margin-right: 2rem !important;
+    }
     &:focus-visible {
       outline: none;
     }
@@ -65,7 +72,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
 
     &-plus {
       font-size: 2.5rem;

@@ -13,23 +13,30 @@ html {
 body {
   background-color: #f3f6fd;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  max-width: 120rem;
-  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .heading-secondary {
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.heading-tertiary {
   font-size: 2rem;
   font-weight: 600;
   color: #444;
 }
 
 .header {
+  width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 .header__ham {
   font-size: 3rem;
@@ -46,11 +53,16 @@ body {
 .header__static {
   display: flex;
   align-items: center;
-  gap: 8rem;
+  gap: 10rem;
 }
 @media (max-width: 54.5em) {
   .header__static {
     gap: 5rem;
+  }
+}
+@media (max-width: 36.5em) {
+  .header__static {
+    margin-right: 2rem;
   }
 }
 .header__search-container {
@@ -75,6 +87,11 @@ body {
     display: none;
   }
 }
+@media (max-width: 36.5em) {
+  .header__search-text {
+    margin-right: 2rem !important;
+  }
+}
 .header__search-text:focus-visible {
   outline: none;
 }
@@ -87,7 +104,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 }
 .header__action-plus {
   font-size: 2.5rem;
@@ -134,7 +151,7 @@ body {
 
 .nav__contianer {
   list-style: none;
-  margin-right: 2rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -143,6 +160,8 @@ body {
   .nav__contianer {
     flex-direction: row;
     justify-content: center;
+    padding: 0;
+    transform: translateY(-5rem);
   }
 }
 .nav__link {
@@ -164,6 +183,9 @@ body {
   border-radius: 50%;
 }
 
+.message {
+  transform: translateY(-1rem);
+}
 .message__heading {
   display: flex;
   justify-content: space-between;
@@ -200,6 +222,7 @@ body {
   margin-bottom: 0.8rem;
 }
 .message-card__text-mes p {
+  height: 3rem;
   line-height: 1.5rem;
   overflow-y: hidden;
 }
@@ -256,6 +279,11 @@ body {
     padding: 0 3rem;
   }
 }
+@media (max-width: 49em) {
+  .card-conatiner {
+    padding: 0 0.8rem;
+  }
+}
 @media (max-width: 41em) {
   .card-conatiner {
     grid-template-columns: 1fr;
@@ -264,13 +292,13 @@ body {
 }
 
 .card {
-  border-radius: 20px;
-  width: 26rem;
-  height: 23rem;
-  padding: 1.5rem;
+  border-radius: 24px;
+  width: 35rem;
+  height: 30rem;
+  padding: 1.8rem;
   position: relative;
   justify-self: center;
-  box-shadow: 0 1rem 1.8rem rgba(21, 21, 34, 0.2);
+  box-shadow: 0 1.2rem 2.16rem rgba(21, 21, 34, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -278,28 +306,28 @@ body {
   transform: scale(1.05);
 }
 .card__date {
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   color: #444;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 .card__menu {
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  font-size: 1.2rem;
+  top: 1.44rem;
+  right: 1.8rem;
+  font-size: 1.44rem;
   color: #444;
   cursor: pointer;
 }
 .card__title {
   font-weight: 600;
   color: #444;
-  font-size: 1.8rem;
+  font-size: 2.16rem;
   text-align: center;
 }
 .card__subtitle {
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.8rem;
   text-align: center;
 }
 .card__progress {
@@ -314,17 +342,17 @@ body {
 }
 .card__progress__text--end {
   text-align: end;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.8rem;
-  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 3rem;
+  margin-bottom: 2.16rem;
+  border-bottom: 1.2px solid #f5f5f5;
   width: 100%;
 }
 .card__progress-bar {
   flex: 1;
-  height: 0.6rem;
+  height: 0.72rem;
   background-color: #fff;
-  border-radius: 3px;
-  margin: 0.5rem 0;
+  border-radius: 3.6px;
+  margin: 0.6rem 0;
   overflow: hidden;
 }
 .card__progress-bar-fill {
@@ -340,26 +368,76 @@ body {
   display: flex;
 }
 .card__avatars > .card__avatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  margin-right: -5px;
-  border: 1px solid #fff;
+  margin-right: -6px;
+  border: 1.2px solid #fff;
 }
 .card__avatars > .card__add-icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   border-radius: 50%;
-  margin-left: 0.5rem;
+  margin-left: 0.6rem;
   cursor: pointer;
 }
 .card__deadline {
   background-color: #fff;
-  padding: 0.8rem 2rem;
-  border-radius: 20px;
-  font-size: 1rem;
+  padding: 0.96rem 2.4rem;
+  border-radius: 24px;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
+@media (max-width: 81.5em) {
+  .card {
+    border-radius: 20px;
+    width: 26rem;
+    height: 23rem;
+    padding: 1.5rem;
+    box-shadow: 0 1rem 1.8rem rgba(21, 21, 34, 0.2);
+  }
+  .card__date {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .card__menu {
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .card__title {
+    font-size: 1.8rem;
+  }
+  .card__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .card__progress__text--end {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .card__progress-bar {
+    height: 0.6rem;
+    border-radius: 3px;
+    margin: 0.5rem 0;
+  }
+  .card__avatars > .card__avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: -5px;
+    border: 1px solid #fff;
+  }
+  .card__avatars > .card__add-icon {
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+  }
+  .card__deadline {
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+}
 .card__progress-bar-fill {
   width: 0%;
   transition: width 0.4s ease;
@@ -643,13 +721,13 @@ body {
 }
 
 .project-container {
-  transform: translateY(-1rem);
-  padding: 2rem;
+  transform: translateY(-4rem);
+  padding: 4rem;
 }
 
 .main-grid {
   display: grid;
-  grid-template-columns: 10fr 90fr;
+  grid-template-columns: 1fr 90fr;
 }
 @media (max-width: 49em) {
   .main-grid {
@@ -664,7 +742,7 @@ body {
   margin: 3rem 2rem;
 }
 .project-heading__text {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #444;
 }
@@ -682,12 +760,12 @@ body {
 }
 
 .project-info__subtext {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #666;
   white-space: nowrap;
 }
 .project-info__num {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .project-info__icon {
@@ -706,6 +784,4 @@ body {
   font-size: 2.5rem;
   margin-left: 2rem;
   cursor: pointer;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

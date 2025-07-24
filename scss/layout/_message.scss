@@ -1,6 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .message {
+
+  transform: translateY(-1rem);
+
   &__heading {
     display: flex;
     justify-content: space-between;
@@ -35,9 +38,11 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0.8rem;
+    
       }
 
       &-mes p {
+        height: 3rem;
         line-height: 1.5rem;
         overflow-y: hidden;
       }

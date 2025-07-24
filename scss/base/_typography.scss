@@ -1,7 +1,13 @@
 @use "../abstracts/variables" as *;
+.heading-secondary {
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 600;
+  color: $gary-mid-color;
+}
 
-.heading-secondary{
-    font-size: 2rem;
-    font-weight: 600;
-    color: $gary-mid-color ;
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $gary-mid-color;
 }
