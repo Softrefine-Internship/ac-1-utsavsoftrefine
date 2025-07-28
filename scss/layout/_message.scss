@@ -1,9 +1,18 @@
 @use "../abstracts/variables" as *;
-
-.message {
-  transform: translateY(-1rem);
+.message-card-container {
   height: 85vh;
   overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // Hide scrollbar for Firefox
+  scrollbar-width: none;
+
+  // Hide scrollbar for IE and old Edge (if needed)
+  -ms-overflow-style: none;
+}
+.message {
   &__heading {
     display: flex;
     justify-content: space-between;
@@ -16,6 +25,11 @@
   &-card {
     display: flex;
     padding: 1rem;
+
+    @media (max-width: 75em) {
+      padding: 0;
+      padding-top: 1rem;
+    }
     gap: 2rem;
     padding-left: 3rem;
     transition: all 0.4s;
@@ -77,7 +91,7 @@
       box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
     }
 
-    @media (max-width: 67em) {
+    @media (max-width: 75em) {
       &:hover {
         transform: none;
         background-color: $white-color;

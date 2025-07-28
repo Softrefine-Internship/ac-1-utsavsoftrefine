@@ -7,7 +7,19 @@
   row-gap: 6rem;
   column-gap: 2rem;
   margin-top: 3rem;
+  padding-top: 0.2rem;
+  z-index: 100;
+  height: 85vh; /* Limit height on mobile */
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
+  // Hide scrollbar for Firefox
+  scrollbar-width: none;
+
+  // Hide scrollbar for IE and old Edge (if needed)
+  -ms-overflow-style: none;
   @media (max-width: 67em) {
     padding: 0 3rem;
   }

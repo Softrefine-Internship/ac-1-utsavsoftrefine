@@ -9,9 +9,6 @@
 }
 
 html {
-
-
-
   @media (min-width: 95em) {
     font-size: 75%;
   }
@@ -26,16 +23,12 @@ html {
   @media (max-width: 54.5em) {
     font-size: 50%;
   }
-
-
-
 }
 
 body {
-  background-color:$main-bg-color;
+  background-color: $main-bg-color;
   font-family: "Poppins", "Segoe UI", sans-serif;
   overflow: hidden;
-
 }
 
 @media (max-width: 75em) {
@@ -48,18 +41,17 @@ body {
   }
 }
 @media (max-width: 75em) {
-  .project-container {
+  .card-conatiner {
     overflow-y: auto;
     margin-bottom: 2rem;
   }
 
-  .message {
+  .message-card-container {
     height: 70vh;
     max-height: 60vh; /* Limit height on mobile */
     overflow-y: auto;
   }
 }
-
 
 @media (max-width: 67em) {
   .card-conatiner {
@@ -85,6 +77,6 @@ body {
 
   @media (max-width: 49em) {
     display: block !important;
-   color: transparent !important;
+    color: transparent !important;
   }
 }

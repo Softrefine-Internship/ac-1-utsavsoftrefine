@@ -15,9 +15,6 @@
 .project-container {
   transform: translateY(-4rem);
   padding: 4rem;
-  height: 85vh; /* Limit height on mobile */
-  overflow-y: auto;
-  max-width: 95vw;
 }
 .project-container::-webkit-scrollbar {
   width: 6px;

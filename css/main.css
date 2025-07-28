@@ -42,11 +42,11 @@ body {
   }
 }
 @media (max-width: 75em) {
-  .project-container {
+  .card-conatiner {
     overflow-y: auto;
     margin-bottom: 2rem;
   }
-  .message {
+  .message-card-container {
     height: 70vh;
     max-height: 60vh; /* Limit height on mobile */
     overflow-y: auto;
@@ -98,6 +98,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  padding-left: 3rem;
   margin-bottom: 6rem;
 }
 .header__ham {
@@ -219,6 +220,7 @@ body {
 .nav__contianer {
   list-style: none;
   padding-top: 4rem;
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -261,11 +263,16 @@ body {
   border-radius: 50%;
 }
 
-.message {
-  transform: translateY(-1rem);
+.message-card-container {
   height: 85vh;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.message-card-container::-webkit-scrollbar {
+  display: none;
+}
+
 .message__heading {
   display: flex;
   justify-content: space-between;
@@ -280,6 +287,12 @@ body {
   padding-left: 3rem;
   transition: all 0.4s;
   border-bottom: 1px solid #777;
+}
+@media (max-width: 75em) {
+  .message-card {
+    padding: 0;
+    padding-top: 1rem;
+  }
 }
 .message-card__img {
   margin-top: 0.5rem;
@@ -330,7 +343,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 1rem 1.8rem rgba(21, 21, 34, 0.2);
 }
-@media (max-width: 67em) {
+@media (max-width: 75em) {
   .message-card:hover {
     transform: none;
     background-color: #fff;
@@ -384,6 +397,15 @@ body {
   row-gap: 6rem;
   column-gap: 2rem;
   margin-top: 3rem;
+  padding-top: 0.2rem;
+  z-index: 100;
+  height: 85vh; /* Limit height on mobile */
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.card-conatiner::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 67em) {
   .card-conatiner {
@@ -834,9 +856,6 @@ body {
 .project-container {
   transform: translateY(-4rem);
   padding: 4rem;
-  height: 85vh; /* Limit height on mobile */
-  overflow-y: auto;
-  max-width: 95vw;
 }
 
 .project-container::-webkit-scrollbar {
