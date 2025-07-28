@@ -21,7 +21,9 @@
   @media (max-width: 54.5em) {
     gap: 1rem;
   }
+  @media (max-width: 36.5em) {
 
+  }
 }
 
 .project-info {
@@ -29,16 +31,22 @@
     font-size: 1.2rem;
     color: $gray-light-color;
     white-space: nowrap;
+    @media (max-width: 36.5em) {
+      font-size: 1rem;
+    }
   }
 
   &__num {
     font-size: 3rem;
     font-weight: 600;
+    @media (max-width: 36.5em) {
+      font-size: 2rem;
+    }
   }
 
   &__icon {
     font-size: 0.7rem;
-    margin-left: 1rem;
+    margin-left: 2.5rem;
 
     &:hover {
       background-color: green;
@@ -53,5 +61,11 @@
     font-size: 2.5rem;
     margin-left: 2rem;
     cursor: pointer;
+  }
+}
+
+.media--modifer{
+  @media (max-width: 36.5em) {
+    font-size: 1rem;
   }
 }

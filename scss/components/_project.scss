@@ -12,4 +12,10 @@
   @media (max-width: 54.5em) {
     gap: 3rem;
   }
+  @media (max-width: 36.5em) {
+    flex-wrap: wrap;
+    margin-right: 2rem;
+
+    
+  }
 }

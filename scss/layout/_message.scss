@@ -1,16 +1,16 @@
 @use "../abstracts/variables" as *;
 
 .message {
-
   transform: translateY(-1rem);
-
+  height: 85vh;
+  overflow-y: auto;
   &__heading {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $card-hor-color;
-    padding-top: 4rem;
-    padding-left: 3rem;
+    border-bottom: 1px solid $gray-dark-color;
+    padding: 2rem 2rem 2rem 4rem;
+
+    align-items: center;
   }
 
   &-card {
@@ -38,7 +38,6 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0.8rem;
-    
       }
 
       &-mes p {
@@ -69,13 +68,39 @@
       }
     }
 
-    border-bottom: 1px solid $card-hor-color;
+    border-bottom: 1px solid $gray-dark-color;
 
     &:hover {
       background-color: $white-color;
-      transform: scale(1.1);
+      transform: scaleX(1.05);
       border-radius: 20px;
       box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
     }
+
+    @media (max-width: 67em) {
+      &:hover {
+        transform: none;
+        background-color: $white-color;
+        border-radius: 20px;
+        box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
+      }
+    }
   }
+}
+
+.message::-webkit-scrollbar {
+  width: 6px;
+}
+
+.message::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.message::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.message::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
 }

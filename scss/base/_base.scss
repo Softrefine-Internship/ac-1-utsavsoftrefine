@@ -9,11 +9,82 @@
 }
 
 html {
-  font-size: 62.5%;
+
+
+
+  @media (min-width: 95em) {
+    font-size: 75%;
+  }
+  @media (max-width: 95em) {
+    font-size: 66.5%;
+  }
+
+  @media (max-width: 81em) {
+    font-size: 62.5%;
+  }
+
+  @media (max-width: 54.5em) {
+    font-size: 50%;
+  }
+
+
+
 }
 
 body {
   background-color:$main-bg-color;
   font-family: "Poppins", "Segoe UI", sans-serif;
-  padding: 0 2rem;
+  overflow: hidden;
+
+}
+
+@media (max-width: 75em) {
+  body {
+    overflow-y: auto;
+  }
+
+  .main-grid {
+    min-height: auto;
+  }
+}
+@media (max-width: 75em) {
+  .project-container {
+    overflow-y: auto;
+    margin-bottom: 2rem;
+  }
+
+  .message {
+    height: 70vh;
+    max-height: 60vh; /* Limit height on mobile */
+    overflow-y: auto;
+  }
+}
+
+
+@media (max-width: 67em) {
+  .card-conatiner {
+    padding: 0 3rem 2rem 3rem;
+  }
+}
+
+@media (max-width: 49em) {
+  .card-conatiner {
+    padding: 0 0.8rem 2rem 0.8rem;
+  }
+}
+
+@media (max-width: 41em) {
+  .card-conatiner {
+    grid-template-columns: 1fr;
+    padding: 0 0 2rem 0;
+  }
+}
+
+.display-transpert {
+  display: none;
+
+  @media (max-width: 49em) {
+    display: block !important;
+   color: transparent !important;
+  }
 }

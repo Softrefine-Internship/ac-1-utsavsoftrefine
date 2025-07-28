@@ -11,8 +11,20 @@
     @media (max-width: 49em) {
       flex-direction: row;
       justify-content: center;
+      align-items: center;
       padding: 0;
-      transform: translateY(-5rem);
+
+      background-color: $white-color;
+      border-radius: 50px;
+
+      order: 2; /* Move navigation below content on mobile */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #f3f6fd;
+      padding: 1rem 0;
     }
   }
 
@@ -24,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 0.8rem;
 
     &-icon {
       color: inherit;

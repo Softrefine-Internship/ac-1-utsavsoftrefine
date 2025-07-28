@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 6rem;
+  column-gap: 2rem;
   margin-top: 3rem;
 
   @media (max-width: 67em) {
@@ -132,72 +133,71 @@
   }
 }
 
-@media (max-width: 81.5em) {
-    .card {
-      border-radius: 20px;
-      width: 26rem;
-      height: 23rem;
-      padding: 1.5rem;
-      box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
+@media (max-width: 67em) {
+  .card {
+    border-radius: 20px;
+    width: 26rem;
+    height: 23rem;
+    padding: 1.5rem;
+    box-shadow: 0 1rem 1.8rem rgba($black-color, 0.2);
 
-      &__date {
-        font-size: 1.2rem;
-        margin-bottom: 2.5rem;
-      }
+    &__date {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
 
-      &__menu {
-        top: 1.2rem;
-        right: 1.5rem;
-        font-size: 1.2rem;
-      }
+    &__menu {
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 1.2rem;
+    }
 
-      &__title {
-        font-size: 1.8rem;
-      }
+    &__title {
+      font-size: 1.8rem;
+    }
 
-      &__subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-      }
+    &__subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
 
-      &__progress {
-        &__text {
-          &--end {
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.8rem;
-            border-bottom: 1px solid $card-hor-color;
-          }
-        }
-
-        &-bar {
-          height: 0.6rem;
-          border-radius: 3px;
-          margin: 0.5rem 0;
+    &__progress {
+      &__text {
+        &--end {
+          padding-bottom: 1.5rem;
+          margin-bottom: 0.8rem;
+          border-bottom: 1px solid $gary-mid-color;
         }
       }
 
-      &__avatars {
-        & > .card__avatar {
-          width: 2.5rem;
-          height: 2.5rem;
-          margin-right: -5px;
-          border: 1px solid $white-color;
-        }
-
-        & > .card__add-icon {
-          font-size: 2.5rem;
-          margin-left: 0.5rem;
-        }
-      }
-
-      &__deadline {
-        padding: 0.8rem 2rem;
-        border-radius: 20px;
-        font-size: 1rem;
+      &-bar {
+        height: 0.6rem;
+        border-radius: 3px;
+        margin: 0.5rem 0;
       }
     }
-  }
 
+    &__avatars {
+      & > .card__avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: -5px;
+        border: 1px solid $white-color;
+      }
+
+      & > .card__add-icon {
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    &__deadline {
+      padding: 0.8rem 2rem;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+  }
+}
 
 .card__progress-bar-fill {
   width: 0%; // default

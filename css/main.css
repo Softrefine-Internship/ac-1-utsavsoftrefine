@@ -6,14 +6,76 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+@media (min-width: 95em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 95em) {
+  html {
+    font-size: 66.5%;
+  }
+}
+@media (max-width: 81em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 54.5em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
   background-color: #f3f6fd;
   font-family: "Poppins", "Segoe UI", sans-serif;
-  padding: 0 2rem;
+  overflow: hidden;
+}
+
+@media (max-width: 75em) {
+  body {
+    overflow-y: auto;
+  }
+  .main-grid {
+    min-height: auto;
+  }
+}
+@media (max-width: 75em) {
+  .project-container {
+    overflow-y: auto;
+    margin-bottom: 2rem;
+  }
+  .message {
+    height: 70vh;
+    max-height: 60vh; /* Limit height on mobile */
+    overflow-y: auto;
+  }
+}
+@media (max-width: 67em) {
+  .card-conatiner {
+    padding: 0 3rem 2rem 3rem;
+  }
+}
+@media (max-width: 49em) {
+  .card-conatiner {
+    padding: 0 0.8rem 2rem 0.8rem;
+  }
+}
+@media (max-width: 41em) {
+  .card-conatiner {
+    grid-template-columns: 1fr;
+    padding: 0 0 2rem 0;
+  }
+}
+.display-transpert {
+  display: none;
+}
+@media (max-width: 49em) {
+  .display-transpert {
+    display: block !important;
+    color: transparent !important;
+  }
 }
 
 .heading-secondary {
@@ -53,7 +115,7 @@ body {
 .header__static {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 7.5rem;
 }
 @media (max-width: 54.5em) {
   .header__static {
@@ -76,6 +138,11 @@ body {
 .header__search-icon {
   font-size: 2rem;
   margin-right: 2rem;
+}
+@media (max-width: 49em) {
+  .header__search-icon {
+    margin-right: 0;
+  }
 }
 .header__search-text {
   border: none;
@@ -104,7 +171,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 .header__action-plus {
   font-size: 2.5rem;
@@ -160,8 +227,18 @@ body {
   .nav__contianer {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 0;
-    transform: translateY(-5rem);
+    background-color: #fff;
+    border-radius: 50px;
+    order: 2; /* Move navigation below content on mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #f3f6fd;
+    padding: 1rem 0;
   }
 }
 .nav__link {
@@ -172,6 +249,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 0.8rem;
 }
 .nav__link-icon {
   color: inherit;
@@ -185,14 +263,15 @@ body {
 
 .message {
   transform: translateY(-1rem);
+  height: 85vh;
+  overflow-y: auto;
 }
 .message__heading {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #f5f5f5;
-  padding-top: 4rem;
-  padding-left: 3rem;
+  border-bottom: 1px solid #777;
+  padding: 2rem 2rem 2rem 4rem;
+  align-items: center;
 }
 .message-card {
   display: flex;
@@ -200,7 +279,7 @@ body {
   gap: 2rem;
   padding-left: 3rem;
   transition: all 0.4s;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #777;
 }
 .message-card__img {
   margin-top: 0.5rem;
@@ -247,9 +326,34 @@ body {
 }
 .message-card:hover {
   background-color: #fff;
-  transform: scale(1.1);
+  transform: scaleX(1.05);
   border-radius: 20px;
   box-shadow: 0 1rem 1.8rem rgba(21, 21, 34, 0.2);
+}
+@media (max-width: 67em) {
+  .message-card:hover {
+    transform: none;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 1rem 1.8rem rgba(21, 21, 34, 0.2);
+  }
+}
+
+.message::-webkit-scrollbar {
+  width: 6px;
+}
+
+.message::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.message::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.message::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
 }
 
 .project-container {
@@ -267,11 +371,18 @@ body {
     gap: 3rem;
   }
 }
+@media (max-width: 36.5em) {
+  .project-all-info-container {
+    flex-wrap: wrap;
+    margin-right: 2rem;
+  }
+}
 
 .card-conatiner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 6rem;
+  column-gap: 2rem;
   margin-top: 3rem;
 }
 @media (max-width: 67em) {
@@ -388,7 +499,7 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 81.5em) {
+@media (max-width: 67em) {
   .card {
     border-radius: 20px;
     width: 26rem;
@@ -414,8 +525,8 @@ body {
   }
   .card__progress__text--end {
     padding-bottom: 1.5rem;
-    margin-bottom: 1.8rem;
-    border-bottom: 1px solid #f5f5f5;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #444;
   }
   .card__progress-bar {
     height: 0.6rem;
@@ -714,7 +825,7 @@ body {
   grid-template-columns: 2fr 1fr;
   margin: 1rem;
 }
-@media (max-width: 67em) {
+@media (max-width: 75em) {
   .grid {
     grid-template-columns: 1fr;
   }
@@ -723,6 +834,26 @@ body {
 .project-container {
   transform: translateY(-4rem);
   padding: 4rem;
+  height: 85vh; /* Limit height on mobile */
+  overflow-y: auto;
+  max-width: 95vw;
+}
+
+.project-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.project-container::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
 }
 
 .main-grid {
@@ -758,19 +889,28 @@ body {
     gap: 1rem;
   }
 }
-
 .project-info__subtext {
   font-size: 1.2rem;
   color: #666;
   white-space: nowrap;
 }
+@media (max-width: 36.5em) {
+  .project-info__subtext {
+    font-size: 1rem;
+  }
+}
 .project-info__num {
   font-size: 3rem;
   font-weight: 600;
 }
+@media (max-width: 36.5em) {
+  .project-info__num {
+    font-size: 2rem;
+  }
+}
 .project-info__icon {
   font-size: 0.7rem;
-  margin-left: 1rem;
+  margin-left: 2.5rem;
 }
 .project-info__icon:hover {
   background-color: green;
@@ -784,4 +924,12 @@ body {
   font-size: 2.5rem;
   margin-left: 2rem;
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@media (max-width: 36.5em) {
+  .media--modifer {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
